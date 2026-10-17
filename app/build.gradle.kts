@@ -19,4 +19,7 @@ android {
 dependencies {
     implementation("androidx.webkit:webkit:1.12.1")
     implementation("androidx.activity:activity-ktx:1.9.3")
+
+    // Material Components untuk Theme.RideTrackPro
+    implementation("com.google.android.material:material:1.12.0")
 }
