@@ -1,20 +1,15 @@
-name: Build RideTrack Pro V4 APK
+name: Build VeloxSport V4 APK
 
 on:
   push:
     branches: [ "main", "master" ]
-  pull_request:
-    branches: [ "main", "master" ]
   workflow_dispatch:
-
-permissions:
-  contents: read
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
       - name: Set up JDK 17
         uses: actions/setup-java@v4
@@ -28,5 +23,5 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: RideTrack-Pro-V4-debug
+          name: VeloxSportV4-debug-apk
           path: app/build/outputs/apk/debug/app-debug.apk
